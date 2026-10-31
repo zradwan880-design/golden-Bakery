@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+:root {
+    --black: #17130d;
+    --gold: #d9ae58;
+    --cream: #f8f4eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--cream);
+    color: var(--black);
+}
+
+.header {
+    min-height: 75px;
+    background: var(--black);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 900;
+    direction: ltr;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    position: relative;
+    min-height: 520px;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    overflow: hidden;
+    color: white;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    background:
+    linear-gradient(270deg, #17130d 0%, #17130d 8%, transparent 100%),
+    linear-gradient(0deg, #17130d88, transparent),
+    url('../images/golden-hero.png') center/cover;
+    opacity: .85;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 470px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(43px, 8vw, 72px);
+    line-height: 1.35;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #ddd;
+    margin-bottom: 28px;
+}
+
+.gold-button {
+    display: inline-block;
+    background: var(--gold);
+    color: #17130d;
+    padding: 13px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.products {
+    padding: 85px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading > span,
+.about > span {
+    color: #ae8336;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #777;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px #0000000c;
+    transition: transform .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-visual {
+    min-height: 190px;
+    background: #eee4d1;
+    display: grid;
+    place-items: center;
+    font-size: 85px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #777;
+    font-size: 13px;
+}
+
+.price {
+    margin-top: 18px;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    font-weight: bold;
+}
+
+.price span {
+    color: #a77a2e;
+}
+
+.about {
+    background: var(--black);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.about h2 {
+    color: var(--gold);
+    margin: 15px;
+    font-size: 34px;
+}
+
+.contact {
+    padding: 65px 20px;
+    text-align: center;
+    background: #e9dfcc;
+}
+
+footer {
+    background: var(--black);
+    color: #ccc;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+@media(max-width: 600px) {
+    .header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .hero {
+        min-height: 440px;
+        padding: 45px 7%;
+    }
+
+    .product-grid {
+        gap: 12px;
+    }
+
+    .product-visual {
+        min-height: 140px;
+        font-size: 65px;
+    }
+
+    .product-info {
+        padding: 13px;
+    }
+}
